@@ -1,0 +1,175 @@
+.dashboard .nav-bar{
+    background-color: rgb(232, 253, 253);
+    height: 80px;
+    text-align: center;
+}
+
+.dashboard{
+    height: 100vh;
+}
+
+.dash{
+    display: flex;
+    height: 100%;
+    /* background-color: aquamarine; */
+
+}
+
+.dashboard .dash .side-bar{
+    /* background-color: turquoise; */
+    height: 100%;
+    /* background: var(--White, #FFF); */
+    /* background: var(--White, #FFF); */
+
+    box-shadow: 0px 4.88333px 39.06667px 0px rgba(0, 0, 0, 0.07);
+    background-color: #333;
+    /* margin-left: 10px; */
+    width: 100px;
+    padding: 0 10px 0 10px;
+}
+
+.dashboard .dash .side-bar ul{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 0;
+}
+
+.dashboard .dash .side-bar ul li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--text-80, #969696);
+    padding-left: 10px;
+    height: 70px;
+    
+}
+
+.dashboard .dash .side-bar ul .dash-logo{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.dashboard .dash .side-bar ul .dash-logo img{
+    width: 35px;
+
+}
+.dashboard .dash .side-bar ul .dash-logo b{
+    color: var(--primary-800, #074C83);
+
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px
+}
+
+.dashboard .dash .side-bar ul li h3{
+    color: var(--text-80, #ffffff);
+font-family: Poppins;
+font-size: 17px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+.dashboard .dash .side-bar ul li:hover{
+    background-color: #CFE8FC;
+}
+
+.dashboard .content{
+    width: 100%;
+    height:100% ;
+    overflow: auto;
+    
+}
+
+.dashboard .dash .side-bar li.active {
+    background-color: #f0f0f0; 
+    /* border-left: 4px solid #007bff;  */
+    border: 4px solid #007bff;
+    color: #007bff;
+    padding-left: 18px;
+}
+
+.dashboard .dash .side-bar li.active h3{
+    color: white;
+}
+
+.dashboard .dash .side-bar .dash-icons{
+    width: 25px;
+    height: 25px;
+
+    
+}
+
+.dashboard .dash .side-bar h3{
+    margin: 0;
+}
+
+
+.icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-text {
+    display: none;
+    position: absolute;
+    left: calc(100% + 10px); /* Adjust based on your icon size */
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    font-size:larger;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-text h3{
+    font-size: 100px;
+    color: #007bff;
+}
+
+.icon-container:hover .nav-text {
+    display: block; 
+    font-size: larger;
+    font-size:larger;
+    font-weight: bold;
+    color: white;
+}
+
+.icon-container:hover .nav-text h3{
+    font-size: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar-container {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .side-bar {
+        width: 100%; /* Take full width on smaller screens */
+        display: none; /* Initially hide the sidebar */
+    }
+
+    .content {
+        width: 100%;
+        margin-left: 0; /* Adjust margin when sidebar is hidden */
+    }
+
+    .show-sidebar .side-bar {
+        display: block; /* Show the sidebar when the container has the 'show-sidebar' class */
+    }
+}

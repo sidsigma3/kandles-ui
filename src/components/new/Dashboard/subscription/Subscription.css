@@ -1,0 +1,212 @@
+.subscribe-page{
+    background-color: #FFFFFF;
+    padding: 0.5rem;
+}
+
+
+.subscribe-page .sub-page-heading{
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 5px 0 10px 10px ;
+    margin-right: 20px; 
+    height: 100px;
+}
+
+.subscribe-page .sub-page-heading h2{
+    color: var(--primary-500, #2196F3);
+/* Heading/3 */
+font-family: Epilogue;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: 50px;
+}
+
+.subscribe-page .sub-page-heading p{
+    color: var(--gray-600, #5C7184);
+
+/* Body/M */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+
+.subscribe-page .sub-container{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 40px 20px;
+    padding-left: 242px;
+
+}
+
+.subscribe-page .sub-container .Basic-plan,.subscribe-page .sub-container .Advance{
+    border-radius: 12px;
+    border: 1px solid var(--gray-200, #C6CFD7);
+    background: var(--gray-0, #FFF);
+
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
+    padding: 20px 40px 20px 20px ;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subscribe-page .sub-container h3{
+    color: #074C83;
+}
+
+.subscribe-page .sub-container p{
+    color: var(--gray-600, #5C7184);
+/* Body/M */
+font-family: Poppins;
+margin: 0;
+font-size: 14px;
+}
+
+.subscribe-page .sub-container ul{
+    padding: 0;
+}
+
+.subscribe-page .sub-container button{
+    border-radius: 8px;
+    background: var(--primary-500, #2196F3);
+    color: white;
+    border: 0;
+    display: flex;
+padding: 5px 10px;
+justify-content: center;
+align-items: center;
+}
+
+.subscribe-page .sub-table{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-right: 184px;
+}
+
+.subscribe-page .sub-table table{
+    width: 1000px;
+}
+
+.subscribe-page .sub-table table h3{
+    color: #074C83;
+}
+
+.sub-table th, .sub-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .sub-table thead {
+    background-color: #95CDF9;
+
+
+  }
+  
+  .sub-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+.struggling{
+    margin-top: 7rem;
+    background-color: #C6CFD7;
+    height: 4rem;
+    padding: 1rem;
+}
+
+.fundtrade{
+    background-color:#f4f4f4;
+    margin-top: 50px;
+    margin: 1rem;
+}
+.fundtrade .fundtrade-head {
+    padding: 1rem;
+    background-color: #95CDF9;
+    border-radius: 5px;
+}
+
+
+.fundtrade .fundtrade-head h4{
+    color: #2196F3;
+    font-family: poppins;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 3rem;
+ 
+}
+
+.fundtrade .fundtrade-head {
+    color:#074C83;
+
+}
+
+.fundtrade .how-it-works{
+    padding: 1rem;
+    margin-top: 1rem;
+}
+.fundtrade .how-it-works h4{
+    margin-bottom: 2rem;
+}
+
+  .fundtrade .top{
+    background-color: azure;
+    height: 420px;
+    padding: 10px;
+}
+
+
+.fundtrade .top{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    margin-top: 100px;
+}
+
+.fundtrade .top table td{
+    width: 200px;
+}
+
+.fundtrade .bottom{
+    padding-top: 50px;
+}
+
+.fundtrade .bottom ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.fundtrade .bottom li{
+    background-color: aqua;
+   
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid var(--gray-200, #C6CFD7);
+    background: var(--gray-0, #FFF);
+    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
+}
+
+.fundtrade .bottom ul button{
+    background-color: black;
+    color: aliceblue;
+    border-radius: 10px;
+    font-size: medium;
+    margin-left: 10px;
+}
+
+
+.fundtrade .bottom ul h2{
+    margin-top: 100px;
+}
+
+.fundtrade .bottom ul h4{
+    margin-bottom: 50px;
+}

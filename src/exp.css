@@ -1,0 +1,192 @@
+  .option-chain{
+    height: 500px;
+  }
+  
+ .option-chain h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .option-chain label {
+    font-weight: bold;
+  }
+  
+  .option-chain input {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .option-chain button {
+    padding: 5px 10px;
+  }
+  .option-chain table {
+    border: 1px solid black;
+  }
+  
+  .option-chain th,td {
+    border: 1px solid rgb(219, 218, 218);
+  }
+
+
+  .option-chain .lastPrice{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    padding: 0 0 10px 5px;
+  }
+
+
+  #result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .option-chain form{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .option-chain form select{
+    width: 15%;
+    font-size:18px ;
+  
+  }
+
+  .option-chain form button{
+    height: 45px;
+  }
+
+  .option-chain > div >label>h3{
+    text-align: center;
+  }
+
+  
+  /* Add more styles as needed */
+  
+  .option-chain {
+    margin-top: 20px;
+  }
+ 
+  .option-chain .option-table{
+    overflow: auto;
+    max-height: 570px
+  }
+
+  .option-chain .option-table thead th{
+    background-color: #549ae0; /* Set a background color for the heading row */
+  position: sticky;
+    color: white;
+  top: 0;
+  z-index: 1;
+  }
+
+
+  .option-chain .option-table th, .option-chain .option-table td {
+    /* border: 1px solid #151313; */
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .option-chain .option-table thead {
+    background-color: #95CDF9;
+
+
+  }
+
+  .option-chain .option-table .table-strike{
+    background-color: rgb(244, 242, 242);
+    width: 550px;
+  }
+  
+  .atm-row{
+    background-color: #99caffd6;
+  }
+
+  /* Colors for Call Rows */
+.call-itm-row {
+  background-color:#fffee5; /* Green for in-the-money calls */
+  color: black;
+}
+
+.call-otm-row {
+  background-color:#ffffff; /* Red for out-of-the-money calls */
+  color: black;
+}
+
+/* Colors for Put Rows */
+.put-itm-row {
+  background-color: #fcfcfc; /* Red for in-the-money puts */
+  color: white;
+}
+
+.put-otm-row {
+  background-color: #4CAF50; /* Green for out-of-the-money puts */
+  color: white;
+}
+
+
+.option-chain .react-autosuggest__suggestions-container {
+  position: absolute;
+  z-index: 999;
+  max-height: 200px; /* Set your desired max height */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  background-color: #fff; /* Set your desired background color */
+  border: 1px solid #ccc; /* Add a border for a clear separation */
+  width: 220px;
+  display: none;
+}
+
+.option-chain .react-autosuggest__suggestions-container--open{
+  display: block;
+}
+
+.option-chain .react-autosuggest__container{
+  position: relative;
+}
+
+.option-chain .react-autosuggest__suggestion {
+ padding-left: 0;
+  cursor: pointer;
+}
+
+.option-chain .react-autosuggest__suggestion--highlighted {
+  background-color: #325ce4;
+  color: white    ; /* Set the background color for highlighted suggestion */
+}
+.option-chain .horizontal-bar {
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+ 
+  
+}
+
+.option-chain .bar {
+  height: 20px; /* Set the height of the bars */
+  background-color: #ffe2e3; /* Set the color of the bars */
+  margin-left: 40px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; /* Adjust margin between bars */
+}
+
+.option-chain .bar-put {
+  height: 20px; /* Set the height of the bars */
+  background-color: #cfefdf; /* Set the color of the bars */
+  margin-right: 40px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; /* Adjust margin between bars */
+}
+
+.change-in-oi {
+  text-align: center;
+  font-weight: bold;
+}
+
+.positive {
+  color: #039855;
+}
+
+.negative {
+  color:#C22E00
+}

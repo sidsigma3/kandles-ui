@@ -1,0 +1,28 @@
+.scanner{
+    width: 100%;
+    height: 800px;
+    padding: 10px;
+   
+}
+
+.scanner .scanner-tab{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 10px 10px 10px ;
+    margin-bottom: 15px;
+    background-color:#BCDFFB;
+    gap: 0;
+}
+
+
+.scanner .scanner-tab .nav-link{
+    color: #1d2226;
+    font-size:15px;
+}
+
+
+
+/* .scanner .scanner-tab .tab-content{
+    height: 800px;
+    overflow: auto;
+} */
