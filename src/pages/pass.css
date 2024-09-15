@@ -33,21 +33,21 @@ a:hover{
     display: flex;
     flex-direction: column;
 }
-.left{
+.pass-reset .left{
     height: 200px;
 }
-.left, .right{
+.pass-reset .left,.pass-reset .right{
     display: flex;
     justify-content: center;
     align-items: center;
 	background-color: rgb(255, 255, 255);
 }
-.left{
+.pass-reset .left{
     background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.5)), url(./../../public/logIn.svg);
     background-size: cover;
     position: relative;
 }
-.left .copy{
+.pass-reset .left .copy{
     position: absolute;
     top: 0;
     left: 0;
@@ -56,21 +56,18 @@ a:hover{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.left .copy h1{
+.pass-reset .left .copy h1{
     font-size: 50px;
 }
-.left p{
+.pass-reset .left p{
     font-weight: 400;
-}
-.right .copy{
+}.pass-reset .right .copy{
     color: black;
     text-align: center;
-}
-.right .copy p{
+}.pass-reset .right .copy p{
     margin: 1.5em 0;
     font-size: 0.875rem;
-}
-.right form{
+}.pass-reset .right form{
     width: 328px;
 }
 .pass-reset form input[type="text"],.pass-reset form input[type="email"],.pass-reset input[type="password"]{
@@ -122,7 +119,7 @@ a:hover{
         flex-direction: row;
         height: 100vh;
     }
-    .left, .right {
+    .pass-reset .left,.pass-reset .right {
         display: flex;
         width: 50%;
         height: auto;
