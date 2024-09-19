@@ -8,7 +8,6 @@ import { createBrowserHistory} from 'history';
 import Pass from './pages/Pass';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-// import Homepage from './pages/Homepage';
 import Start from './Start';
 import Exp from "./Exp"
 import Greek from "./Greek"
@@ -23,7 +22,6 @@ import LogIn from './components/new/LogIn/LogIn';
 import SignUp from './components/new/SignUp/SignUp';
 import Log from './components/new/LogIn/Log';
 import Dashboard from './components/new/Dashboard/Dashboard';
-import HomePage from './components/new/Dashboard/Home/HomePage';
 import SystemTrading from './components/new/Dashboard/systemTrading/SystemTrading';
 import CompeteRank from './components/new/Dashboard/Competition/CompeteRank';
 import Graph from './components/new/Dashboard/Graph/Graph';
@@ -33,8 +31,10 @@ import StrategyBuild from './components/new/Dashboard/Strategy/StrategyBuild';
 import StrategyBuildPage from './components/new/Dashboard/Strategy/StrategyBuildPage';
 
 
+import HomePage from './components/new/Landing/HomePage';
 import LandingPage from './components/new/Landing/LandingPage';
 import SignUpPage from './components/new/Landing/SignUpPage';
+import Homepage from './pages/Homepage';
 
 const saveToLocalStorage = (key, value) => {
     localStorage.setItem(key, JSON.stringify(value));
@@ -70,6 +70,9 @@ return(
                 <Route exact path='/landing' element={<LandingPage></LandingPage>}/> 
                 <Route exact path='/signup' element={<SignUpPage></SignUpPage>}/> 
                 
+                <Route exact path='/newlanding' element={<Landing></Landing>}/> 
+               
+
                 
                 {/* <Route path="homepage" element={<HomePage></HomePage>} /> */}
                 <Route path="system-trading" element={<SystemTrading />} />
@@ -78,9 +81,9 @@ return(
                 <Route path="account" element={<div>Account Information Content</div>} />
                 {/* Add more routes as needed */}
                 {/* Redirect to home if no match */}
-                <Route path="/" element={<HomePage></HomePage>} />
+                {/* <Route path="/" element={<HomePage></HomePage>} /> */}
 
-
+    
 
 
                 {/* <Route exact path='/' element={<Start></Start>}/>  */}

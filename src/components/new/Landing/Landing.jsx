@@ -1,765 +1,444 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import './Landing.css'
-import '../../../global.css'
+import {useNavigate,useLocation} from 'react-router-dom'
+
+
+
+
 
 const Landing = () => {
 
 
-const navigate = useNavigate()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    const navigate = useNavigate();
 
 
 
   return (
-    <div>
-    <div className='nav'>
-
-        <div className='logo'>
-           
-        <a href='#'>
-   <div className='logo-container' onClick={()=>navigate('/')}>
-    <img src='/group-39795.svg'>
-    </img>
-    <b className='tradient'>
-        Tradiant
-    </b>
-
-    </div>
-    </a>
-
-        <div className='navlinks'>
-            <ul>
-
-                <li>
-                    <a onClick={()=>navigate('/about-us')}>
-                    About Us    
-                    </a>
-                </li>
-               
-                <li className='why-us'>
-                    <a  onClick={()=>navigate('/why-Us')}>
-                        Why Us?
-                    </a>
-
-                </li>
-                <li className='Blog'>
-                    <a  onClick={()=>navigate('/blog')}>
-                        Blog
-                    </a>
-
-                </li>
-                <li className='Journey'>
-                    <a href='#'>
-                        Journey
-                    </a>
-
-                </li><li className='Help'>
-                    <a  href='#'>
-                        Help
-                    </a>
-
-                </li>
-            </ul>
-
-        </div>
-
-        </div>
-
-        <div className='login-buttons'>
-            <div className='login'>
-            <a onClick={()=>{navigate('/signup')}}>
-                <div className='sign-up'>
-               Sign Up
-                </div>
-                </a>
-                <button onClick={()=>{navigate('/login')}}>Sign In</button>
-            </div>
-
-        </div>
-    </div>
-
-    <div className='section-1'>
-        <div className='sec-1-left'>
-            <h4>Smart Trading</h4>
-           
-            <h2>Trade With <span>Risk Management</span></h2>
-            <div className='content'>
-            <text>Maximize your investment in the capital market world with the </text>
-            <text>convenience and various features provided by Tradiant.</text>
-            </div>
-
-
-            <div className='clickable'>
-                <div className='get-started'>
-                    Get Started
-                </div>
-                <div className='see'>
-                    See How It Works
-                </div>
-
-            </div>
-        </div>
-
-        <div className='sec-1-right'>
-         
-            <img src='/Dashboard.svg' alt='dashboard'></img>
-            
-        </div>
-    </div>
-
-    <div className='section-2'>
-        <h3>
-        Elevate Your Trading Experience with Risk Management Features Across Diverse Broker Platforms
-        </h3>
-
-        <div className='flow-container'>
-            <img src='/newflow.svg'></img>
-        </div>
-
-        {/* <ul className='logo-list'>
-            <li>
-                <img src='/Zerodha.svg'></img>
-            </li>
-
-            <li>
-                <img src='/Zerodha.svg'></img>
-            </li>
-
-            <li>
-                <img src='/group2.svg'></img>
-            </li>
-
-            <li>
-                <img src='/group3.svg'></img>
-            </li>
-
-            <li>
-                <img src='/group4.svg'></img>
-            </li>
-
-            <li>
-                <img src='/group5.svg'></img>
-            </li>
-
-            <li>
-                <img src='/group6.svg'></img>
-            </li>
-          
-
-        </ul> */}
-
-    </div>
-
-    <div className='section-3'>
-        <div className='section-3-top'>
-            <h2>
-            Why <span>Tradiant?</span>
-            </h2>
-
-            <p>
-            At Tradiant, you will benefit from us, such as many conveniences in transactions, user-friendly transparency, and many others
-            </p>
-
-        </div>
-        {/* <div className='heading'>
-            <h4>Why Choose Tradiant</h4>
+    <div className='home-page'>
+         <svg xmlns="http://www.w3.org/2000/svg" width="906" height="898" viewBox="0 0 906 898" fill="none">
+            <path d="M64.023 295.107C-7.71852 204.072 -4.46834 -3.10742 6.12445 -95.3178L942.967 -383.508L1092.17 -4.40655L1166.74 872.704C1055.99 890.606 806.914 916.459 696.638 876.655C558.793 826.901 600.223 707.704 485.851 665.552C371.478 623.4 409.511 461.85 364.257 409.449C319.004 357.047 153.7 408.9 64.023 295.107Z" fill="#BABABA" fill-opacity="0.71"/>
+            </svg>
        
+        <div  className='navbar'>
+            <div className='left-logo'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="46" viewBox="0 0 45 46" fill="none">
+            <path d="M19.6875 11.5C16.9062 11.5 14.1874 12.3431 11.8748 13.9226C9.56223 15.5022 7.75981 17.7472 6.69545 20.3739C5.63109 23.0006 5.35261 25.891 5.89521 28.6794C6.43782 31.4679 7.77714 34.0293 9.74382 36.0397C11.7105 38.05 14.2162 39.4191 16.944 39.9738C19.6719 40.5285 22.4994 40.2438 25.069 39.1558C27.6386 38.0678 29.8348 36.2253 31.3801 33.8613C32.9253 31.4974 33.75 28.7181 33.75 25.875H19.6875V11.5Z" stroke="#5A55D2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M25.3125 20.125H39.375C39.375 16.3125 37.8934 12.6562 35.2562 9.96034C32.619 7.2645 29.0421 5.75 25.3125 5.75V20.125Z" stroke="#FFC100" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
 
-       
-            <h2>Specially designed for stock market</h2>
-        </div>
-
-        <ul className='img-list'>
-            <li>
-                <div className='pic-list-1'>
-                <img src='/pic-list-1.svg'>
-                
-                </img>
-                </div>
-            </li>
-
-            <li>
-            <div className='pic-list-2'>
-                <img src='/pic-list-2.svg'>
-                
-                </img>
-                </div>
-            </li>
-
-            <li>
-            <div className='pic-list-3'>
-                <img src='/pic-list-1.svg'>
-                
-                </img>
-                </div>
-            </li>
-
-        </ul>
-
-        <ul className='info-list'>
-            <li className='info-1'>
-                <h3>
-                Quick Faster
-                </h3>
-                <text>
-                Information spreads faster with the help of the Tradiant community. With Tradiant, you will be more updated with the latest information.
-                </text>
-            </li>
-            
-            <li className='info-2'>
-                <h3>
-                Manage your wallets
-                </h3>
-                <text>
-                Make your finances easier and safer with Tradiant and make every transaction more secure and quality.
-                </text>
-            </li>
-
-            <li className='info-3'>
-                <h3>
-                Update Your Statictics
-                </h3>
-                <text>
-                Update your general stats faster with direct notifications from Tradiant and make your next transaction more quality.
-                </text>
-            </li>
-
-
-        </ul> */}
-
-<ul className='info-list'>
-                <li className='info-1'>
-                    <div className='top'>
-                        <img src='/high-standards.svg'>
-                        </img>
-                    </div>
-
-                    <div className='bottom'>
-                        <h4>
-                        Trailing Stoploss
-                        </h4>
-
-                        <p>
-                        At Tradiant, we prioritize user safety and comfort. Experience enhanced risk management with our dynamic trailing stop-loss feature.
-                        </p>
-                         
-                    </div>
-
-                </li>
-
-                <li className='info-2'>
-                    <div className='top'>
-                        <img src='/invention.svg'>
-                        </img>
-                    </div>
-
-                    <div className='bottom'>
-                        <h4>
-                       Protect Profit
-                        </h4>
-
-                        <p>
-                        At Tradiant, safeguard your gains with our robust profit protection tools, ensuring a secure and rewarding trading experience
-                        </p>
-                         
-                    </div>
-
-                </li>
-
-
-                <li className='info-3'>
-                    <div className='top'>
-                        <img src='/simplicity.svg'>
-                        </img>
-                    </div>
-
-                    <div className='bottom'>
-                        <h4>
-                        Buy At Low
-                        </h4>
-
-                        <p>
-                        At Tradiant, seize opportunities to buy low with our strategic insights, empowering you to make informed and advantageous investment decisions
-
-                        </p>
-                         
-                    </div>
-
-                </li>
-
-
-
-                <li className='info-4'>
-                    <div className='top'>
-                        <img src='/transparency.svg'>
-                        </img>
-                    </div>
-
-                    <div className='bottom'>
-                        <h4>
-                        Maximum Capital Exposure
-                        </h4>
-
-                        <p>
-                        At Tradiant, our cutting-edge scanner provides real-time data on OI changes, Max Pain, and Option Chain, empowering traders with comprehensive insights for informed decision-making.
-                        </p>
-                         
-                    </div>
-
-                </li>
-
-            </ul>
-
-
-            <ul className='info-list'>
-                <li className='info-1'>
-                    <div className='top'>
-                        <img src='/buy-sell.svg'>
-                        </img>
-                    </div>
-
-                    <div className='bottom'>
-                        <h4>
-                        Incremental Buy And Sell
-                        </h4>
-
-                        <p>
-                        At Tradiant, we prioritize user safety and comfort. Experience enhanced risk management with our dynamic trailing stop-loss feature.
-                        </p>
-                         
-                    </div>
-
-                </li>
-
-                <li className='info-2'>
-                    <div className='top'>
-                        <img src='/search.svg'>
-                        </img>
-                    </div>
-
-                    <div className='bottom'>
-                        <h4>
-                      User Define Capital Risk
-                        </h4>
-
-                        <p>
-                        At Tradiant, safeguard your gains with our robust profit protection tools, ensuring a secure and rewarding trading experience
-                        </p>
-                         
-                    </div>
-
-                </li>
-
-
-                <li className='info-3'>
-                    <div className='top'>
-                        <img src='/quantity.svg'>
-                        </img>
-                    </div>
-
-                    <div className='bottom'>
-                        <h4>
-                      Risk Based Quantity
-                        </h4>
-
-                        <p>
-                        At Tradiant, seize opportunities to buy low with our strategic insights, empowering you to make informed and advantageous investment decisions
-
-                        </p>
-                         
-                    </div>
-
-                </li>
-
-
-
-                <li className='info-4'>
-                    <div className='top'>
-                        <img src='/essentional.svg'>
-                        </img>
-                    </div>
-
-                    <div className='bottom'>
-                        <h4>
-                       Reward To Risk
-                        </h4>
-
-                        <p>
-                        At Tradiant, our cutting-edge scanner provides real-time data on OI changes, Max Pain, and Option Chain, empowering traders with comprehensive insights for informed decision-making.
-                        </p>
-                         
-                    </div>
-
-                </li>
-
-            </ul>
-
-    </div>
-
-
-
-
-    <div className='section-4'>
-            <div className='sec-4-left'>
-                <div className='pic-container'>
-                    <img src='/image-60.svg' >
-                    </img>
-                </div>
-
+            <div>
+                <h4>Stock <a>Angel</a></h4>
+            </div>
             </div>
 
-            <div className='sec-4-right'>
-                
-                <div className='info'>
-                    <h4>
-                    Our Feature
-                    </h4>
-
-                    <h2>
-                    Empowering Your Trading Journey with <span>Risk Management </span>features
-                    </h2>
-
-
-                    <text>
-                    Unlock a world of financial intelligence with our platform's diverse features. Stay ahead of market events with our Economic Calendar, track market dynamics with real-time updates on Top Gainers and Losers, and stay informed with a curated News Feed. Elevate your trading experience by accessing a comprehensive suite of tools that empowers you with the knowledge needed to make strategic decisions in the ever-evolving financial landscape.
-                    </text>
-
-                    
-                </div>
-
-                <button>
-                    Get Started
-                </button>
-
-            </div>
-
-            
-
-
-
-    </div>
-
-    <div className='section-5'>
-    <div className='sec-5-left'>
-                
-                <div className='info'>
-                    <h4>
-                    Our Feature
-                    </h4>
-
-                    <h2>
-                    Get sense of market direction from <span>Option Scanner</span>
-                    </h2>
-
-
-                    <text>
-                    Experience the power of our cutting-edge scanner feature that revolutionizes your trading decisions. Gain valuable insights into Open Interest changes, identify Max Pain levels, and access comprehensive Option Chain and Greek data.Empowering you to make informed and precise decisions in the dynamic world of finance.
-
-                    </text>
-
-                    
-                </div>
-
-                <button>
-                    Get Started
-                </button>
-
-            </div>
-
-            <div className='sec-5-right'>
-                <div className='pic-container'>
-                    <img src='/unsplash_Gw_sFen8VhU.png' >
-                    </img>
-                </div>
-
-            </div>
-
-
-
-    </div>
-
-
-    <div className='section-6'>
-        <div className='sec-6-container'>
-            <div className='sec-6-left'>
-                <h4>
-                Our Newsletter
-                </h4>
-
-                <h2>
-                Stay updated with our weekly newsletter
-                </h2>
-
-                <p>
-                a collection of the hottest stock market news sent every week to your email
-                </p>
-
-            </div>
-
-
-            <div className='sec-6-right'>
-                <div className='info'>
-                    <h4>
-                    Signup For Newsletter
-                    </h4>
-
-                </div>
-
-                <div className='input'>
-                    <input className='email' placeholder='Email'>
-                       
-                       
-                    </input>
-
-                    <input className='password' placeholder='password'>
-                    </input>
-
+            <div className='middle'>
+                <div>
                     <button>
-                        Get Started
+                        Features
                     </button>
-
                 </div>
 
                 <div>
-
+                    <button>
+                        Market
+                    </button>
                 </div>
 
+                <div>
+                    <button>
+                        About us 
+                    </button>
+                </div>
+
+                <div>
+                    <button>
+                                Analytics
+                    </button>
+                </div>
+
+                <div>
+                    <button>
+                            Pricing
+                    </button>
+                </div>
+               
+                
             </div>
-            
+
+            <div className='right-buttons'>
+
+                    <div className='log-in'>
+                        <button onClick={()=>navigate('/landing')}>
+                                Login
+                        </button>
+                    </div>
+
+                    <div className='sign-up'>
+                        <button>
+                                Sign Up
+                        </button>
+                    </div>
+
+            </div>
+
+
+
+
+
         </div>
 
-    </div>
 
 
+        <div className='heading'>
+            <div className='left'>
+            <div>
+                <h3>Unleash Your <span>Trading </span> <br></br>
+                Potential with Advanced <br></br>
+                <span>Risk Management Tools</span></h3>
+            </div>
+
+            <div>
+                <p>Maximize your profits with real-time market analysis, advanced trading tools,and risk management strategies.</p>
+            </div>
+
+            <div className='btn-container'>
+                <button className='get-started'>Get Started FREE!</button>
+                <button className='watch-tutor'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="27" viewBox="0 0 23 27" fill="none">
+                    <path d="M1.52491 26.7437C0.858671 27.1545 0 26.6753 0 25.8925V1.10725C0 0.324501 0.85867 -0.15478 1.52491 0.256095L21.6198 12.6487C22.2533 13.0394 22.2533 13.9604 21.6198 14.351L1.52491 26.7437ZM3.13636 20.3718C3.13636 21.1543 3.99462 21.6337 4.66087 21.2232L15.8157 14.3513C16.4497 13.9607 16.4497 13.039 15.8157 12.6485L4.66087 5.77656C3.99462 5.36611 3.13636 5.84543 3.13636 6.62796V20.3718Z" fill="#5A55D2"/>
+                    </svg>
+                     Watch Tutorials</button>
+            </div>
+            </div>
+
+            <div className='right'>
+            <img  src='./landing-background.svg'></img>
+           
+            </div>
+
+            
+           
 
 
-    <div className='section-7'>
-            <div className='sec-7-container'>
-                <div className='sec-7-left'>
-                <div className='brand'>
-                    <img  src='/group-39795.svg'>
-                    </img>
-
-                    <h2>
-                        Tradiant
-                    </h2>
-
-                </div>
-
-                <p>
-                Maximize your investment in the capital market world with the convenience and various features provided by Tradiant.
-                </p>
-
-                <h5>Unduh Aplikasi</h5>
-
-                </div>
-
-                <div className='sec-7-right'>
-                    <div className='info-1'>
-                        <h4>
-                        Companies
-                        </h4>
-
-                        <ul>
-                            <li>
-                                <p>
-                                About Us
-                                </p>
-                            </li>
-
-                            <li>
-                                <p>
-                                Journey
-                                </p>
-                            </li>
+        </div>
 
 
-                            <li>
-                                <p>
-                                Blog
-                                </p>
-                            </li>
+        <div className='border-svg'>
+        <img src='./border.svg'></img>
 
+        </div>
 
-                            <li>
-                                <p>
-                                Contact
-                                </p>
-                            </li>
+        
 
+        <div className='key-features'>
+            <h4>
+            Key Features
+            </h4>
 
-                            <li>
-                                <p>
-                                Help
-                                </p>
-                            </li>
-                        </ul>
-
-
-                    </div>
-
-                    <div className='info-2'>
-                    <h4>
-                    Resources
-                        </h4>
-
-                        <ul>
-                            <li>
-                                <p>
-                                About Us
-                                </p>
-                            </li>
-
-                            <li>
-                                <p>
-                                Journey
-                                </p>
-                            </li>
-
-
-                            <li>
-                                <p>
-                                Blog
-                                </p>
-                            </li>
-
-
-                            <li>
-                                <p>
-                                Contact
-                                </p>
-                            </li>
-
-
-                            <li>
-                                <p>
-                                Help
-                                </p>
-                            </li>
-                        </ul>
-
-
+            <p>Highlights the key features of the platform, including real-time market <br></br> analysis, advanced trading tools, risk management strategies, and a user- <br></br>friendly interface.</p>
+            
+            <ul>
+                    <li>
                         
-                    </div>
+                            <h4>
+                            Real-Time Market Analysis
+                            </h4>
+
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32121C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73784 14 8.38447 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32121C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67879 0.532843C8.82951 0.18106 7.91926 0 7 0ZM10.9732 5.7659L6.7732 9.6159C6.64023 9.73783 6.46531 9.80371 6.28494 9.7998C6.10456 9.79588 5.93267 9.72248 5.8051 9.5949L3.7051 7.4949C3.63825 7.43033 3.58492 7.35308 3.54823 7.26768C3.51155 7.18228 3.49223 7.09042 3.49143 6.99748C3.49062 6.90453 3.50833 6.81236 3.54353 6.72633C3.57872 6.6403 3.6307 6.56215 3.69643 6.49642C3.76215 6.4307 3.84031 6.37872 3.92633 6.34352C4.01236 6.30833 4.10454 6.29061 4.19748 6.29142C4.29043 6.29223 4.38228 6.31154 4.46769 6.34823C4.55309 6.38491 4.63033 6.43824 4.6949 6.5051L6.321 8.1312L10.0268 4.7341C10.1636 4.6086 10.3447 4.54259 10.5302 4.5506C10.7157 4.55861 10.8904 4.63997 11.0159 4.7768C11.1414 4.91362 11.2074 5.0947 11.1994 5.28019C11.1914 5.46568 11.11 5.6404 10.9732 5.7659Z" fill="white"/>
+                                </svg>
+
+                                <p>Instant market data and trends.</p>
+
+                            </div>
+
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32121C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73784 14 8.38447 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32121C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67879 0.532843C8.82951 0.18106 7.91926 0 7 0ZM10.9732 5.7659L6.7732 9.6159C6.64023 9.73783 6.46531 9.80371 6.28494 9.7998C6.10456 9.79588 5.93267 9.72248 5.8051 9.5949L3.7051 7.4949C3.63825 7.43033 3.58492 7.35308 3.54823 7.26768C3.51155 7.18228 3.49223 7.09042 3.49143 6.99748C3.49062 6.90453 3.50833 6.81236 3.54353 6.72633C3.57872 6.6403 3.6307 6.56215 3.69643 6.49642C3.76215 6.4307 3.84031 6.37872 3.92633 6.34352C4.01236 6.30833 4.10454 6.29061 4.19748 6.29142C4.29043 6.29223 4.38228 6.31154 4.46769 6.34823C4.55309 6.38491 4.63033 6.43824 4.6949 6.5051L6.321 8.1312L10.0268 4.7341C10.1636 4.6086 10.3447 4.54259 10.5302 4.5506C10.7157 4.55861 10.8904 4.63997 11.0159 4.7768C11.1414 4.91362 11.2074 5.0947 11.1994 5.28019C11.1914 5.46568 11.11 5.6404 10.9732 5.7659Z" fill="white"/>
+                                </svg>
+
+                                <p>Live charts, graphs & pricing updates.</p>
+
+                            </div>
+
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32121C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73784 14 8.38447 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32121C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67879 0.532843C8.82951 0.18106 7.91926 0 7 0ZM10.9732 5.7659L6.7732 9.6159C6.64023 9.73783 6.46531 9.80371 6.28494 9.7998C6.10456 9.79588 5.93267 9.72248 5.8051 9.5949L3.7051 7.4949C3.63825 7.43033 3.58492 7.35308 3.54823 7.26768C3.51155 7.18228 3.49223 7.09042 3.49143 6.99748C3.49062 6.90453 3.50833 6.81236 3.54353 6.72633C3.57872 6.6403 3.6307 6.56215 3.69643 6.49642C3.76215 6.4307 3.84031 6.37872 3.92633 6.34352C4.01236 6.30833 4.10454 6.29061 4.19748 6.29142C4.29043 6.29223 4.38228 6.31154 4.46769 6.34823C4.55309 6.38491 4.63033 6.43824 4.6949 6.5051L6.321 8.1312L10.0268 4.7341C10.1636 4.6086 10.3447 4.54259 10.5302 4.5506C10.7157 4.55861 10.8904 4.63997 11.0159 4.7768C11.1414 4.91362 11.2074 5.0947 11.1994 5.28019C11.1914 5.46568 11.11 5.6404 10.9732 5.7659Z" fill="white"/>
+                                </svg>
+
+                                <p>Historical data comparison.</p>
+
+                            </div>
+
+                            <div>
+            <button>
+            View more
+
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="8" viewBox="0 0 7 8" fill="none">
+            <path d="M1 4.28758H0.9V4.18758V3.81242V3.71242H1H5.20721L3.28312 1.3241L3.23142 1.25991L3.28454 1.1969L3.50489 0.935543L3.58308 0.842793L3.65921 0.937252L6.07786 3.9385L6.12837 4.00117L6.07794 4.0639L3.66752 7.06265L3.59142 7.15733L3.51312 7.06445L3.29175 6.80184L3.23868 6.7389L3.29027 6.67473L5.20953 4.28758H1Z" fill="white" stroke="white" stroke-width="0.2"/>
+            </svg>
+            </button>
+
+        </div>
+
+                    </li>
+
+                   
+
+                    <li>
 
 
-                    <div className='info-3'>
                     <h4>
-                    Help
-                        </h4>
+                            Real-Time Market Analysis
+                            </h4>
 
-                        <ul>
-                            <li>
-                                <p>
-                                House Rules
-                                </p>
-                            </li>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32121C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73784 14 8.38447 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32121C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67879 0.532843C8.82951 0.18106 7.91926 0 7 0ZM10.9732 5.7659L6.7732 9.6159C6.64023 9.73783 6.46531 9.80371 6.28494 9.7998C6.10456 9.79588 5.93267 9.72248 5.8051 9.5949L3.7051 7.4949C3.63825 7.43033 3.58492 7.35308 3.54823 7.26768C3.51155 7.18228 3.49223 7.09042 3.49143 6.99748C3.49062 6.90453 3.50833 6.81236 3.54353 6.72633C3.57872 6.6403 3.6307 6.56215 3.69643 6.49642C3.76215 6.4307 3.84031 6.37872 3.92633 6.34352C4.01236 6.30833 4.10454 6.29061 4.19748 6.29142C4.29043 6.29223 4.38228 6.31154 4.46769 6.34823C4.55309 6.38491 4.63033 6.43824 4.6949 6.5051L6.321 8.1312L10.0268 4.7341C10.1636 4.6086 10.3447 4.54259 10.5302 4.5506C10.7157 4.55861 10.8904 4.63997 11.0159 4.7768C11.1414 4.91362 11.2074 5.0947 11.1994 5.28019C11.1914 5.46568 11.11 5.6404 10.9732 5.7659Z" fill="white"/>
+                                </svg>
 
-                            <li>
-                                <p>
-                                Our Terms
-                                </p>
-                            </li>
+                                <p>Instant market data and trends.</p>
 
+                            </div>
 
-                            <li>
-                                <p>
-                                Privacy & Policy
-                                </p>
-                            </li>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32121C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73784 14 8.38447 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32121C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67879 0.532843C8.82951 0.18106 7.91926 0 7 0ZM10.9732 5.7659L6.7732 9.6159C6.64023 9.73783 6.46531 9.80371 6.28494 9.7998C6.10456 9.79588 5.93267 9.72248 5.8051 9.5949L3.7051 7.4949C3.63825 7.43033 3.58492 7.35308 3.54823 7.26768C3.51155 7.18228 3.49223 7.09042 3.49143 6.99748C3.49062 6.90453 3.50833 6.81236 3.54353 6.72633C3.57872 6.6403 3.6307 6.56215 3.69643 6.49642C3.76215 6.4307 3.84031 6.37872 3.92633 6.34352C4.01236 6.30833 4.10454 6.29061 4.19748 6.29142C4.29043 6.29223 4.38228 6.31154 4.46769 6.34823C4.55309 6.38491 4.63033 6.43824 4.6949 6.5051L6.321 8.1312L10.0268 4.7341C10.1636 4.6086 10.3447 4.54259 10.5302 4.5506C10.7157 4.55861 10.8904 4.63997 11.0159 4.7768C11.1414 4.91362 11.2074 5.0947 11.1994 5.28019C11.1914 5.46568 11.11 5.6404 10.9732 5.7659Z" fill="white"/>
+                                </svg>
 
+                                <p>Live charts, graphs & pricing updates.</p>
 
-                           
-                        </ul>
+                            </div>
 
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32121C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73784 14 8.38447 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32121C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67879 0.532843C8.82951 0.18106 7.91926 0 7 0ZM10.9732 5.7659L6.7732 9.6159C6.64023 9.73783 6.46531 9.80371 6.28494 9.7998C6.10456 9.79588 5.93267 9.72248 5.8051 9.5949L3.7051 7.4949C3.63825 7.43033 3.58492 7.35308 3.54823 7.26768C3.51155 7.18228 3.49223 7.09042 3.49143 6.99748C3.49062 6.90453 3.50833 6.81236 3.54353 6.72633C3.57872 6.6403 3.6307 6.56215 3.69643 6.49642C3.76215 6.4307 3.84031 6.37872 3.92633 6.34352C4.01236 6.30833 4.10454 6.29061 4.19748 6.29142C4.29043 6.29223 4.38228 6.31154 4.46769 6.34823C4.55309 6.38491 4.63033 6.43824 4.6949 6.5051L6.321 8.1312L10.0268 4.7341C10.1636 4.6086 10.3447 4.54259 10.5302 4.5506C10.7157 4.55861 10.8904 4.63997 11.0159 4.7768C11.1414 4.91362 11.2074 5.0947 11.1994 5.28019C11.1914 5.46568 11.11 5.6404 10.9732 5.7659Z" fill="white"/>
+                                </svg>
 
-                                            
-                    </div>
+                                <p>Historical data comparison.</p>
 
+                            </div>
 
-                    <div className='info-4'>
+                            <div>
+            <button>
+            View more
+
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="8" viewBox="0 0 7 8" fill="none">
+            <path d="M1 4.28758H0.9V4.18758V3.81242V3.71242H1H5.20721L3.28312 1.3241L3.23142 1.25991L3.28454 1.1969L3.50489 0.935543L3.58308 0.842793L3.65921 0.937252L6.07786 3.9385L6.12837 4.00117L6.07794 4.0639L3.66752 7.06265L3.59142 7.15733L3.51312 7.06445L3.29175 6.80184L3.23868 6.7389L3.29027 6.67473L5.20953 4.28758H1Z" fill="white" stroke="white" stroke-width="0.2"/>
+            </svg>
+            </button>
+
+        </div>
+                    
+                    </li>
+
+                   
+                    <li> 
+
                     <h4>
-                        Companies
-                        </h4>
+                            Real-Time Market Analysis
+                            </h4>
 
-                        <ul>
-                            <li>
-                                <p>
-                                About Us
-                                </p>
-                            </li>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32121C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73784 14 8.38447 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32121C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67879 0.532843C8.82951 0.18106 7.91926 0 7 0ZM10.9732 5.7659L6.7732 9.6159C6.64023 9.73783 6.46531 9.80371 6.28494 9.7998C6.10456 9.79588 5.93267 9.72248 5.8051 9.5949L3.7051 7.4949C3.63825 7.43033 3.58492 7.35308 3.54823 7.26768C3.51155 7.18228 3.49223 7.09042 3.49143 6.99748C3.49062 6.90453 3.50833 6.81236 3.54353 6.72633C3.57872 6.6403 3.6307 6.56215 3.69643 6.49642C3.76215 6.4307 3.84031 6.37872 3.92633 6.34352C4.01236 6.30833 4.10454 6.29061 4.19748 6.29142C4.29043 6.29223 4.38228 6.31154 4.46769 6.34823C4.55309 6.38491 4.63033 6.43824 4.6949 6.5051L6.321 8.1312L10.0268 4.7341C10.1636 4.6086 10.3447 4.54259 10.5302 4.5506C10.7157 4.55861 10.8904 4.63997 11.0159 4.7768C11.1414 4.91362 11.2074 5.0947 11.1994 5.28019C11.1914 5.46568 11.11 5.6404 10.9732 5.7659Z" fill="white"/>
+                                </svg>
 
-                            <li>
-                                <p>
-                                Journey
-                                </p>
-                            </li>
+                                <p>Instant market data and trends.</p>
+
+                            </div>
+
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32121C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73784 14 8.38447 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32121C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67879 0.532843C8.82951 0.18106 7.91926 0 7 0ZM10.9732 5.7659L6.7732 9.6159C6.64023 9.73783 6.46531 9.80371 6.28494 9.7998C6.10456 9.79588 5.93267 9.72248 5.8051 9.5949L3.7051 7.4949C3.63825 7.43033 3.58492 7.35308 3.54823 7.26768C3.51155 7.18228 3.49223 7.09042 3.49143 6.99748C3.49062 6.90453 3.50833 6.81236 3.54353 6.72633C3.57872 6.6403 3.6307 6.56215 3.69643 6.49642C3.76215 6.4307 3.84031 6.37872 3.92633 6.34352C4.01236 6.30833 4.10454 6.29061 4.19748 6.29142C4.29043 6.29223 4.38228 6.31154 4.46769 6.34823C4.55309 6.38491 4.63033 6.43824 4.6949 6.5051L6.321 8.1312L10.0268 4.7341C10.1636 4.6086 10.3447 4.54259 10.5302 4.5506C10.7157 4.55861 10.8904 4.63997 11.0159 4.7768C11.1414 4.91362 11.2074 5.0947 11.1994 5.28019C11.1914 5.46568 11.11 5.6404 10.9732 5.7659Z" fill="white"/>
+                                </svg>
+
+                                <p>Live charts, graphs & pricing updates.</p>
+
+                            </div>
+
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32121C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73784 14 8.38447 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32121C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67879 0.532843C8.82951 0.18106 7.91926 0 7 0ZM10.9732 5.7659L6.7732 9.6159C6.64023 9.73783 6.46531 9.80371 6.28494 9.7998C6.10456 9.79588 5.93267 9.72248 5.8051 9.5949L3.7051 7.4949C3.63825 7.43033 3.58492 7.35308 3.54823 7.26768C3.51155 7.18228 3.49223 7.09042 3.49143 6.99748C3.49062 6.90453 3.50833 6.81236 3.54353 6.72633C3.57872 6.6403 3.6307 6.56215 3.69643 6.49642C3.76215 6.4307 3.84031 6.37872 3.92633 6.34352C4.01236 6.30833 4.10454 6.29061 4.19748 6.29142C4.29043 6.29223 4.38228 6.31154 4.46769 6.34823C4.55309 6.38491 4.63033 6.43824 4.6949 6.5051L6.321 8.1312L10.0268 4.7341C10.1636 4.6086 10.3447 4.54259 10.5302 4.5506C10.7157 4.55861 10.8904 4.63997 11.0159 4.7768C11.1414 4.91362 11.2074 5.0947 11.1994 5.28019C11.1914 5.46568 11.11 5.6404 10.9732 5.7659Z" fill="white"/>
+                                </svg>
+
+                                <p>Historical data comparison.</p>
+
+                            </div>
+
+                            <div>
+            <button>
+            View more
+
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="8" viewBox="0 0 7 8" fill="none">
+            <path d="M1 4.28758H0.9V4.18758V3.81242V3.71242H1H5.20721L3.28312 1.3241L3.23142 1.25991L3.28454 1.1969L3.50489 0.935543L3.58308 0.842793L3.65921 0.937252L6.07786 3.9385L6.12837 4.00117L6.07794 4.0639L3.66752 7.06265L3.59142 7.15733L3.51312 7.06445L3.29175 6.80184L3.23868 6.7389L3.29027 6.67473L5.20953 4.28758H1Z" fill="white" stroke="white" stroke-width="0.2"/>
+            </svg>
+            </button>
+
+        </div>
+                    
+                    </li>
 
 
-                            <li>
-                                <p>
-                                Blog
-                                </p>
-                            </li>
+                    <li> 
+
+    <h4>
+        Real-Time Market Analysis
+        </h4>
+
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32121C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73784 14 8.38447 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32121C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67879 0.532843C8.82951 0.18106 7.91926 0 7 0ZM10.9732 5.7659L6.7732 9.6159C6.64023 9.73783 6.46531 9.80371 6.28494 9.7998C6.10456 9.79588 5.93267 9.72248 5.8051 9.5949L3.7051 7.4949C3.63825 7.43033 3.58492 7.35308 3.54823 7.26768C3.51155 7.18228 3.49223 7.09042 3.49143 6.99748C3.49062 6.90453 3.50833 6.81236 3.54353 6.72633C3.57872 6.6403 3.6307 6.56215 3.69643 6.49642C3.76215 6.4307 3.84031 6.37872 3.92633 6.34352C4.01236 6.30833 4.10454 6.29061 4.19748 6.29142C4.29043 6.29223 4.38228 6.31154 4.46769 6.34823C4.55309 6.38491 4.63033 6.43824 4.6949 6.5051L6.321 8.1312L10.0268 4.7341C10.1636 4.6086 10.3447 4.54259 10.5302 4.5506C10.7157 4.55861 10.8904 4.63997 11.0159 4.7768C11.1414 4.91362 11.2074 5.0947 11.1994 5.28019C11.1914 5.46568 11.11 5.6404 10.9732 5.7659Z" fill="white"/>
+            </svg>
+
+            <p>Instant market data and trends.</p>
+
+        </div>
+
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32121C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73784 14 8.38447 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32121C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67879 0.532843C8.82951 0.18106 7.91926 0 7 0ZM10.9732 5.7659L6.7732 9.6159C6.64023 9.73783 6.46531 9.80371 6.28494 9.7998C6.10456 9.79588 5.93267 9.72248 5.8051 9.5949L3.7051 7.4949C3.63825 7.43033 3.58492 7.35308 3.54823 7.26768C3.51155 7.18228 3.49223 7.09042 3.49143 6.99748C3.49062 6.90453 3.50833 6.81236 3.54353 6.72633C3.57872 6.6403 3.6307 6.56215 3.69643 6.49642C3.76215 6.4307 3.84031 6.37872 3.92633 6.34352C4.01236 6.30833 4.10454 6.29061 4.19748 6.29142C4.29043 6.29223 4.38228 6.31154 4.46769 6.34823C4.55309 6.38491 4.63033 6.43824 4.6949 6.5051L6.321 8.1312L10.0268 4.7341C10.1636 4.6086 10.3447 4.54259 10.5302 4.5506C10.7157 4.55861 10.8904 4.63997 11.0159 4.7768C11.1414 4.91362 11.2074 5.0947 11.1994 5.28019C11.1914 5.46568 11.11 5.6404 10.9732 5.7659Z" fill="white"/>
+            </svg>
+
+            <p>Live charts, graphs & pricing updates.</p>
+
+        </div>
+
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32121C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73784 14 8.38447 14 7C14 6.08075 13.8189 5.17049 13.4672 4.32121C13.1154 3.47194 12.5998 2.70026 11.9497 2.05025C11.2997 1.40024 10.5281 0.884626 9.67879 0.532843C8.82951 0.18106 7.91926 0 7 0ZM10.9732 5.7659L6.7732 9.6159C6.64023 9.73783 6.46531 9.80371 6.28494 9.7998C6.10456 9.79588 5.93267 9.72248 5.8051 9.5949L3.7051 7.4949C3.63825 7.43033 3.58492 7.35308 3.54823 7.26768C3.51155 7.18228 3.49223 7.09042 3.49143 6.99748C3.49062 6.90453 3.50833 6.81236 3.54353 6.72633C3.57872 6.6403 3.6307 6.56215 3.69643 6.49642C3.76215 6.4307 3.84031 6.37872 3.92633 6.34352C4.01236 6.30833 4.10454 6.29061 4.19748 6.29142C4.29043 6.29223 4.38228 6.31154 4.46769 6.34823C4.55309 6.38491 4.63033 6.43824 4.6949 6.5051L6.321 8.1312L10.0268 4.7341C10.1636 4.6086 10.3447 4.54259 10.5302 4.5506C10.7157 4.55861 10.8904 4.63997 11.0159 4.7768C11.1414 4.91362 11.2074 5.0947 11.1994 5.28019C11.1914 5.46568 11.11 5.6404 10.9732 5.7659Z" fill="white"/>
+            </svg>
+
+            <p>Historical data comparison.</p>
+
+        </div>
+
+        <div>
+            <button>
+            View more
+
+            
+            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="8" viewBox="0 0 7 8" fill="none">
+            <path d="M1 4.28758H0.9V4.18758V3.81242V3.71242H1H5.20721L3.28312 1.3241L3.23142 1.25991L3.28454 1.1969L3.50489 0.935543L3.58308 0.842793L3.65921 0.937252L6.07786 3.9385L6.12837 4.00117L6.07794 4.0639L3.66752 7.06265L3.59142 7.15733L3.51312 7.06445L3.29175 6.80184L3.23868 6.7389L3.29027 6.67473L5.20953 4.28758H1Z" fill="white" stroke="white" stroke-width="0.2"/>
+            </svg>
+            </button>
+
+        </div>
+
+    </li>
+
+                   
+
+            </ul>
+
+        </div>
 
 
-                            <li>
-                                <p>
-                                Contact
-                                </p>
-                            </li>
+
+        <div className='top-tier'>
+            <img src='./element.svg'></img>
+            <div className='left'>
+                <img src='./tier-left.svg'></img>
+
+            </div>
 
 
-                            <li>
-                                <p>
-                                Help
-                                </p>
-                            </li>
-                        </ul>
+            <div className='right'>
 
+                <h4><span>Top-Tier Brokers</span> <br></br>Integrated for Your <br></br>Success</h4>
 
-                                            
-                    </div>
+                <ul>
+                    <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17316C0.00433283 8.00042 -0.1937 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8078C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17316C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761204C12.6136 0.258658 11.3132 0 10 0ZM15.676 8.237L9.676 13.737C9.48604 13.9112 9.23615 14.0053 8.97848 13.9997C8.7208 13.9941 8.47524 13.8893 8.293 13.707L5.293 10.707C5.19749 10.6147 5.12131 10.5044 5.0689 10.3824C5.01649 10.2604 4.98891 10.1292 4.98775 9.9964C4.9866 9.86362 5.0119 9.73194 5.06218 9.60904C5.11246 9.48615 5.18672 9.3745 5.28061 9.2806C5.3745 9.18671 5.48615 9.11246 5.60905 9.06218C5.73195 9.0119 5.86363 8.98659 5.9964 8.98775C6.12918 8.9889 6.2604 9.01649 6.38241 9.0689C6.50441 9.1213 6.61476 9.19749 6.707 9.293L9.03 11.616L14.324 6.763C14.5195 6.58371 14.7781 6.48942 15.0431 6.50086C15.3081 6.5123 15.5577 6.62853 15.737 6.824C15.9163 7.01946 16.0106 7.27814 15.9991 7.54313C15.9877 7.80812 15.8715 8.05771 15.676 8.237Z" fill="#1A1E29"/>
+                    </svg>
 
-                     </div>
+                    <p>Verified, reliable brokers at your service</p>
+                    </li>
 
+                    <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17316C0.00433283 8.00042 -0.1937 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8078C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17316C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761204C12.6136 0.258658 11.3132 0 10 0ZM15.676 8.237L9.676 13.737C9.48604 13.9112 9.23615 14.0053 8.97848 13.9997C8.7208 13.9941 8.47524 13.8893 8.293 13.707L5.293 10.707C5.19749 10.6147 5.12131 10.5044 5.0689 10.3824C5.01649 10.2604 4.98891 10.1292 4.98775 9.9964C4.9866 9.86362 5.0119 9.73194 5.06218 9.60904C5.11246 9.48615 5.18672 9.3745 5.28061 9.2806C5.3745 9.18671 5.48615 9.11246 5.60905 9.06218C5.73195 9.0119 5.86363 8.98659 5.9964 8.98775C6.12918 8.9889 6.2604 9.01649 6.38241 9.0689C6.50441 9.1213 6.61476 9.19749 6.707 9.293L9.03 11.616L14.324 6.763C14.5195 6.58371 14.7781 6.48942 15.0431 6.50086C15.3081 6.5123 15.5577 6.62853 15.737 6.824C15.9163 7.01946 16.0106 7.27814 15.9991 7.54313C15.9877 7.80812 15.8715 8.05771 15.676 8.237Z" fill="#1A1E29"/>
+                    </svg>
 
+                    <p>Quick account setup and instant funding options</p>
+                    </li>
 
+                    <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17316C0.00433283 8.00042 -0.1937 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8078C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17316C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761204C12.6136 0.258658 11.3132 0 10 0ZM15.676 8.237L9.676 13.737C9.48604 13.9112 9.23615 14.0053 8.97848 13.9997C8.7208 13.9941 8.47524 13.8893 8.293 13.707L5.293 10.707C5.19749 10.6147 5.12131 10.5044 5.0689 10.3824C5.01649 10.2604 4.98891 10.1292 4.98775 9.9964C4.9866 9.86362 5.0119 9.73194 5.06218 9.60904C5.11246 9.48615 5.18672 9.3745 5.28061 9.2806C5.3745 9.18671 5.48615 9.11246 5.60905 9.06218C5.73195 9.0119 5.86363 8.98659 5.9964 8.98775C6.12918 8.9889 6.2604 9.01649 6.38241 9.0689C6.50441 9.1213 6.61476 9.19749 6.707 9.293L9.03 11.616L14.324 6.763C14.5195 6.58371 14.7781 6.48942 15.0431 6.50086C15.3081 6.5123 15.5577 6.62853 15.737 6.824C15.9163 7.01946 16.0106 7.27814 15.9991 7.54313C15.9877 7.80812 15.8715 8.05771 15.676 8.237Z" fill="#1A1E29"/>
+                    </svg>
+
+                    <p>Cross-platform compatibility for easy access</p>
+                    </li>
+
+                    <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17316C0.00433283 8.00042 -0.1937 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8078C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17316C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761204C12.6136 0.258658 11.3132 0 10 0ZM15.676 8.237L9.676 13.737C9.48604 13.9112 9.23615 14.0053 8.97848 13.9997C8.7208 13.9941 8.47524 13.8893 8.293 13.707L5.293 10.707C5.19749 10.6147 5.12131 10.5044 5.0689 10.3824C5.01649 10.2604 4.98891 10.1292 4.98775 9.9964C4.9866 9.86362 5.0119 9.73194 5.06218 9.60904C5.11246 9.48615 5.18672 9.3745 5.28061 9.2806C5.3745 9.18671 5.48615 9.11246 5.60905 9.06218C5.73195 9.0119 5.86363 8.98659 5.9964 8.98775C6.12918 8.9889 6.2604 9.01649 6.38241 9.0689C6.50441 9.1213 6.61476 9.19749 6.707 9.293L9.03 11.616L14.324 6.763C14.5195 6.58371 14.7781 6.48942 15.0431 6.50086C15.3081 6.5123 15.5577 6.62853 15.737 6.824C15.9163 7.01946 16.0106 7.27814 15.9991 7.54313C15.9877 7.80812 15.8715 8.05771 15.676 8.237Z" fill="#1A1E29"/>
+                    </svg>
+
+                    <p>Dedicated support from each broker’s platform</p>
+                    </li>
+
+                    <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M10 0C8.02219 0 6.08879 0.58649 4.4443 1.6853C2.79981 2.78412 1.51809 4.3459 0.761209 6.17316C0.00433283 8.00042 -0.1937 10.0111 0.192152 11.9509C0.578004 13.8907 1.53041 15.6725 2.92894 17.0711C4.32746 18.4696 6.10929 19.422 8.0491 19.8078C9.98891 20.1937 11.9996 19.9957 13.8268 19.2388C15.6541 18.4819 17.2159 17.2002 18.3147 15.5557C19.4135 13.9112 20 11.9778 20 10C20 8.68678 19.7413 7.38642 19.2388 6.17316C18.7362 4.95991 17.9997 3.85752 17.0711 2.92893C16.1425 2.00035 15.0401 1.26375 13.8268 0.761204C12.6136 0.258658 11.3132 0 10 0ZM15.676 8.237L9.676 13.737C9.48604 13.9112 9.23615 14.0053 8.97848 13.9997C8.7208 13.9941 8.47524 13.8893 8.293 13.707L5.293 10.707C5.19749 10.6147 5.12131 10.5044 5.0689 10.3824C5.01649 10.2604 4.98891 10.1292 4.98775 9.9964C4.9866 9.86362 5.0119 9.73194 5.06218 9.60904C5.11246 9.48615 5.18672 9.3745 5.28061 9.2806C5.3745 9.18671 5.48615 9.11246 5.60905 9.06218C5.73195 9.0119 5.86363 8.98659 5.9964 8.98775C6.12918 8.9889 6.2604 9.01649 6.38241 9.0689C6.50441 9.1213 6.61476 9.19749 6.707 9.293L9.03 11.616L14.324 6.763C14.5195 6.58371 14.7781 6.48942 15.0431 6.50086C15.3081 6.5123 15.5577 6.62853 15.737 6.824C15.9163 7.01946 16.0106 7.27814 15.9991 7.54313C15.9877 7.80812 15.8715 8.05771 15.676 8.237Z" fill="#1A1E29"/>
+                    </svg>
+
+                    <p>Secure, transparent trading environment</p>
+                    </li>
+                </ul>
+
+                <button>Read more
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" viewBox="0 0 16 13" fill="none">
+                    <path d="M1 6.8103H15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 1.4978L15 6.8103L9 11.5022" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
 
             </div>
 
 
 
+
+
+
+        </div>
+
+
+
+        <div className='performance'>
+            <h2>Performance</h2>
+            <text>Experience high-speed execution, low latency, and reliable uptime.</text>
+
+            <div>
+                <div>
+                    <h3>High-Speed Execution</h3>
+                    <p>Execute trades quickly and efficiently with our high-speed execution technology.</p>
+                </div>
+
+                <div>
+                    <h3>Low Latency</h3>
+                    <p>Experience minimal delay in trade execution with our low latency infrastructure.</p>
+                </div>
+
+                <div>
+                    <h3>Reliable Uptime</h3>
+                    <p>Trade with confidence knowing that our platform has a reliable uptime.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
     </div>
-    <footer className='foot'>
-    Copyright @Tradiant 2022. All Rights Reserved.
-
-    </footer>
-
-
-
-    </div>
-    
-
-
   )
 }
 
