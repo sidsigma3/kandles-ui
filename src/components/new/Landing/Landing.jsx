@@ -75,7 +75,7 @@ const Landing = () => {
                     </div>
 
                     <div className='sign-up'>
-                        <button>
+                        <button onClick={()=>navigate('/signUp')}>
                                 Sign Up
                         </button>
                     </div>
@@ -328,6 +328,8 @@ const Landing = () => {
             </svg>
             </button>
 
+            <img src='key-feat-logo.svg'></img>
+
         </div>
 
     </li>
@@ -434,6 +436,56 @@ const Landing = () => {
             </div>
 
         </div>
+
+
+        <div className='feedback'>
+            <h2>Feedback</h2>
+            <text>Read what our satisfied users have to say about their experience with our strategic stock trading platform.</text>
+
+            <div>
+                <div>
+                    <h3>John Smith</h3>
+                    <p>I have been using this platform for a few months now and I am extremely impressed with the real-time market analysis. It has helped me make informed trading decisions and maximize my profits. The advanced trading tools are also a game-changer!</p>
+                </div>
+
+                <div>
+                    <h3>Emily Johnson</h3>
+                    <p>I can't recommend this platform enough! The risk management strategies provided have helped me minimize losses and protect my investments. The user-friendly interface makes it easy for me to navigate and execute trades. It's a must-have for any serious trader.</p>
+                </div>
+
+                <div>
+                    <h3>Michael Williams</h3>
+                    <p>I've tried several trading platforms in the past, but this one stands out from the rest. The real-time market analysis is incredibly accurate and the advanced trading tools give me an edge in the market. The platform's performance is top-notch and I feel confident in my trading decisions.</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div className='performance'>
+            <h2>Features</h2>
+            <text>Presents visually appealing charts and data visualizations to demonstrate the platform's analytical capabilities and real-time market data.</text>
+
+            <div>
+                <div>
+                    <h3>Real-time Market Analysis</h3>
+                    <p>Stay updated with real-time market analysis to make informed trading decisions.</p>
+                </div>
+
+                <div>
+                    <h3>Advanced Trading Tools</h3>
+                    <p>Access a wide range of advanced trading tools to enhance your trading strategies.</p>
+                </div>
+
+                <div>
+                    <h3>Risk Management Strategies</h3>
+                    <p>Implement effective risk management strategies to protect your investments.</p>
+                </div>
+            </div>
+
+        </div>
+
+        
 
 
 

@@ -10,6 +10,12 @@
     padding-left: 6vw;
 }
 
+.landing-page .heading a>div{
+    display: flex;
+    align-items: flex-end;
+}
+
+
 .landing-page .heading h3{
     color: #5A55D2;
 font-family: "Open Sans";
@@ -19,7 +25,7 @@ font-weight: 600;
 line-height: normal;
 }
 
-.landing-page .heading h3>a{
+.landing-page .heading h3>span{
     color: var(--Secondary, #FFC100);
 font-family: "Open Sans";
 font-size: 36px;

@@ -13,6 +13,7 @@
     background: #F4F4F4;
     box-shadow: 0px 111px 31px 0px rgba(0, 0, 0, 0.00), 0px 71px 28px 0px rgba(0, 0, 0, 0.01), 0px 40px 24px 0px rgba(0, 0, 0, 0.03), 0px 18px 18px 0px rgba(0, 0, 0, 0.04), 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
     margin-left: 5vw;
+    align-content: center;
 }
 
 
@@ -47,6 +48,7 @@ line-height: normal;
 
 .home-page .navbar .right-buttons{
     display: flex;
+    gap: 2vw;
 }
 
 .home-page .navbar .middle button{
@@ -434,6 +436,51 @@ letter-spacing: -2.88px;
 }
 
 .home-page .performance>text{
+    color: #000;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.96px;
+opacity: 0.6;
+}
+
+.home-page .feedback{
+    padding: 3vw;
+}
+
+.home-page .feedback>div{
+    gap: 1vw;
+    display: flex;
+}
+
+
+.home-page .feedback>div>div{
+     background: #F8F8F8;;
+}
+
+.home-page .feedback>div>div h3{
+    color: #000;
+font-family: Inter;
+font-size: 25px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+letter-spacing: -1.6px;
+}
+
+.home-page .feedback>h2{
+    color: var(--Dark, #1A1E29);
+font-family: Inter;
+font-size: 72px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+letter-spacing: -2.88px;
+}
+
+.home-page .feedback>text{
     color: #000;
 font-family: Inter;
 font-size: 24px;

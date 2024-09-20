@@ -20,13 +20,18 @@ font-weight: 600;
 line-height: normal;
 }
 
-.signup-page .heading h3>a{
+.signup-page .heading h3>span{
     color: var(--Secondary, #FFC100);
 font-family: "Open Sans";
 font-size: 36px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
+}
+
+.signup-page .heading a>div{
+    display: flex;
+    align-items: flex-end;
 }
 
 .signup-page .container{
