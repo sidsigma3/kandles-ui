@@ -109,7 +109,7 @@ const StrategyBacktest = ({strategyListIndi}) => {
         e.preventDefault();
 
         setLoading(true)    
-        axios.post(`http://localhost:5000/backtest`,{slPct,targetPct,backSymbol,startDate,endDate,backCapital,backQuantity,strategyDetails,graphType,trailPct,sizeAmount,maxQuantity,strategyDetailsExit,positionSizeType,moveSlPct,moveInstrumentPct,timePeriod,marketType,strategyDetails2,strategyDetailsExit2,maxLong,maxShort,selectedDaysForIndi})
+        axios.post(`https://kandles-backend.vercel.app/backtest`,{slPct,targetPct,backSymbol,startDate,endDate,backCapital,backQuantity,strategyDetails,graphType,trailPct,sizeAmount,maxQuantity,strategyDetailsExit,positionSizeType,moveSlPct,moveInstrumentPct,timePeriod,marketType,strategyDetails2,strategyDetailsExit2,maxLong,maxShort,selectedDaysForIndi})
               .then((response)=>{
 
                 const responseData = JSON.parse(response.data); // Manually parse the JSON string
