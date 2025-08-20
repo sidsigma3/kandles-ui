@@ -222,11 +222,16 @@ const StrategyBacktestPage = ({strategyListIndi,setStrategyListIndi,setBacktestR
           e.preventDefault();
   
           setLoading(true)    
-          axios.post(`https://kandles-backend.vercel.app/backtest`,{slPct,targetPct,backSymbol,startDate,endDate,backCapital,backQuantity,strategyDetails,graphType,trailPct,sizeAmount,maxQuantity,strategyDetailsExit,positionSizeType,moveSlPct,moveInstrumentPct,timePeriod,marketType,strategyDetails2,strategyDetailsExit2,maxLong,maxShort,selectedDaysForIndi})
-                .then((response)=>{
-  
+          axios.post(`http://82.112.231.150/backtest`,{slPct,targetPct,backSymbol,startDate,endDate,backCapital,backQuantity,strategyDetails,graphType,trailPct,sizeAmount,maxQuantity,strategyDetailsExit,positionSizeType,moveSlPct,moveInstrumentPct,timePeriod,marketType,strategyDetails2,strategyDetailsExit2,maxLong,maxShort,selectedDaysForIndi})
+          // axios.post(`http://localhost:5000/backtest`,{slPct,targetPct,backSymbol,startDate,endDate,backCapital,backQuantity,strategyDetails,graphType,trailPct,sizeAmount,maxQuantity,strategyDetailsExit,positionSizeType,moveSlPct,moveInstrumentPct,timePeriod,marketType,strategyDetails2,strategyDetailsExit2,maxLong,maxShort,selectedDaysForIndi})
+            .then((response)=>{
+
+                  console.log(response.data)
                   const responseData = JSON.parse(response.data); // Manually parse the JSON string
                   setBacktest(responseData)
+                  console.log(responseData)
+                  console.log(typeof responseData, responseData);
+
                   setBacktestResult(responseData)
                   const parsedData = responseData.map(item => {
                     return {

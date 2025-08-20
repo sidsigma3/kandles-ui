@@ -21,7 +21,7 @@ const LandingPage = () => {
 
     const submitHandler= (e)=>{
         e.preventDefault()
-        axios.post("https://kandles-backend.vercel.app/login",user)
+        axios.post("http://82.112.231.150/login",user)
         .then((res)=>{
           console.log(res.data.stat)
           if (res.data.stat===200){

@@ -425,7 +425,7 @@ const handleOptimise = async () => {
     setLoading(true);  // Start loading
 
     try {
-        const response = await axios.post('http://localhost:5000/optimize', {
+        const response = await axios.post('http://82.112.231.150/optimize', {
             constraints: constraintsData,
             variableInputs: variableInputs,
             goal:goal,
