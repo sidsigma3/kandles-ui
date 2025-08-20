@@ -24,7 +24,7 @@ const SignUpPage = () => {
     useEffect(() => {
         // Make the Axios request when the user state is updated
         if (user.email && user.password && user.registrationMethod==='google') {
-          axios.post('http://82.112.231.150/signup', user).then((res) => {
+          axios.post('https://api.stockangel.online/signup', user).then((res) => {
             if (res.data.stat === 200) {
               toast.success(res.data.msg, { autoClose: 3000 });
             } else {
