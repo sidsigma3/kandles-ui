@@ -72,7 +72,7 @@ const SignUpPage = () => {
               if (refp.test(user.password)){
                 
           
-                axios.post("http://82.112.231.150/signup",user)
+                axios.post("https://api.stockangel.online/signup",user)
                 .then((res)=>{
                
                 if (res.data.stat===200){
