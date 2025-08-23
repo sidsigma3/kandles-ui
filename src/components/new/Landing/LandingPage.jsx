@@ -3,11 +3,11 @@ import './LandingPage.css'
 import { ToastContainer, toast } from 'react-toastify';
 import {useNavigate,useLocation} from 'react-router-dom'
 import axios from 'axios'
-
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const LandingPage = () => {
 
-
+    const [showPassword, setShowPassword] = useState(false);
     const [user,setUser] = useState({})
     const [remenberMe,setRemberMe] = useState()
     
@@ -69,8 +69,8 @@ const LandingPage = () => {
        </div>
 
 
-       <div className='container'>
-            <div className='left'>
+       <div className='container px-10 d-flex'>
+            <div className='left w-50'>
 
                 <h3>Login</h3>
 
@@ -80,12 +80,24 @@ const LandingPage = () => {
                 <form>
                     <div className='inputs-container'>
                         <label>Email</label>
-                        <input type='email' value={user.email} name='email' onChange={changeHandler}></input>
+                        <input className='h-12 border-3 border-gray-400' type='email' value={user.email} name='email' onChange={changeHandler}></input>
                     </div>
 
-                    <div className='inputs-container'>
-                        <label>Password </label>
-                        <input type='password' value={user.password} name='password' onChange={changeHandler}></input>
+                    <div className="inputs-container relative">
+                      <label className="block mb-1">Password</label>
+                      <input
+                        className="border-3 border-gray-400 r w-full px-3 py-2 pr-10 focus:outline-none focus:border-blue-500 h-12"
+                        type={showPassword ? "text" : "password"}
+                        value={user.password}
+                        name="password"
+                        onChange={changeHandler}
+                      />
+                      <span
+                        className="absolute right-3 top-10 cursor-pointer text-gray-500 hover:text-gray-700"
+                        onClick={() => setShowPassword(!showPassword)}
+                      >
+                        {showPassword ? <FaEyeSlash size={22}/> : <FaEye size={22}/>}
+                      </span>
                     </div>
 
                 </form>
@@ -108,7 +120,7 @@ const LandingPage = () => {
 
             <h5>-------------Or login with----------------</h5>
 
-            <div className='login-alternative'>
+            <div className='login-alternative mt-3'>
                 <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M24 12.0733C24 5.40546 18.6274 0 12 0C5.37262 0 0 5.40536 0 12.0733C0 18.0994 4.38825 23.0943 10.125 24V15.5633H7.07812V12.0733H10.125V9.41343C10.125 6.38755 11.9166 4.71615 14.6575 4.71615C15.9705 4.71615 17.3438 4.95195 17.3438 4.95195V7.92313H15.8306C14.3398 7.92313 13.875 8.85381 13.875 9.80864V12.0733H17.2031L16.6711 15.5633H13.875V24C19.6117 23.0943 24 18.0995 24 12.0733Z" fill="#1877F2"/>
@@ -137,9 +149,9 @@ const LandingPage = () => {
             </div>
 
 
-            <div className='right'>
+            <div className='right w-1/2'>
 
-                <img src='./login-img.png'></img>
+                <img className='w-100' src='./login-img.png'></img>
 
             </div>
 

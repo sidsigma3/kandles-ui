@@ -182,12 +182,12 @@ const SignUpPage = () => {
                     <div className='name-container'>
                         <div className='input-container'>
                             <label>First Name</label>
-                            <input type='text'  name='firstName' onChange={changeHandler} required></input>
+                            <input className='border-3 border-gray-400' type='text'  name='firstName' onChange={changeHandler} required></input>
                         </div>
 
                         <div className='input-container'>
                             <label>Last Name</label>
-                            <input type='text'  name='lastName' onChange={changeHandler} required></input>
+                            <input className='border-3 border-gray-400' type='text'  name='lastName' onChange={changeHandler} required></input>
                         </div>
 
 
@@ -196,12 +196,12 @@ const SignUpPage = () => {
                     <div className='name-container'>
                         <div className='input-container'>
                             <label>Email</label>
-                            <input  type="email"  name='email'  onChange={changeHandler} required></input>
+                            <input className='border-3 border-gray-400'  type="email"  name='email'  onChange={changeHandler} required></input>
                         </div>
 
                         <div className='input-container'>
                             <label>Phone Number</label>
-                            <input type='tel' name='phone'  onChange={changeHandler} required></input>
+                            <input className='border-3 border-gray-400' type='tel' name='phone'  onChange={changeHandler} required></input>
 
                                                                                                                                                             
                         </div>
@@ -212,12 +212,12 @@ const SignUpPage = () => {
 
                     <div className='input-container'>
                         <label>Password</label>
-                        <input type="password"  name='password' onChange={changeHandler} required ></input>
+                        <input className='border-3 border-gray-400' type="password"  name='password' onChange={changeHandler} required ></input>
                     </div>
 
                     <div className='input-container'> 
                         <label>Confirm Password</label>
-                        <input type='password'  name='rePassword' onChange={changeHandler} required></input>
+                        <input className='border-3 border-gray-400' type='password'  name='rePassword' onChange={changeHandler} required></input>
                     </div>
 
               

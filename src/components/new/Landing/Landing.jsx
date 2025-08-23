@@ -20,7 +20,7 @@ const Landing = () => {
             <path d="M64.023 295.107C-7.71852 204.072 -4.46834 -3.10742 6.12445 -95.3178L942.967 -383.508L1092.17 -4.40655L1166.74 872.704C1055.99 890.606 806.914 916.459 696.638 876.655C558.793 826.901 600.223 707.704 485.851 665.552C371.478 623.4 409.511 461.85 364.257 409.449C319.004 357.047 153.7 408.9 64.023 295.107Z" fill="#BABABA" fill-opacity="0.71"/>
             </svg>
        
-        <div  className='navbar'>
+        <div  className='navbar p-3'>
             <div className='left-logo'>
             <svg xmlns="http://www.w3.org/2000/svg" width="45" height="46" viewBox="0 0 45 46" fill="none">
             <path d="M19.6875 11.5C16.9062 11.5 14.1874 12.3431 11.8748 13.9226C9.56223 15.5022 7.75981 17.7472 6.69545 20.3739C5.63109 23.0006 5.35261 25.891 5.89521 28.6794C6.43782 31.4679 7.77714 34.0293 9.74382 36.0397C11.7105 38.05 14.2162 39.4191 16.944 39.9738C19.6719 40.5285 22.4994 40.2438 25.069 39.1558C27.6386 38.0678 29.8348 36.2253 31.3801 33.8613C32.9253 31.4974 33.75 28.7181 33.75 25.875H19.6875V11.5Z" stroke="#5A55D2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -69,13 +69,13 @@ const Landing = () => {
             <div className='right-buttons'>
 
                     <div className='log-in'>
-                        <button onClick={()=>navigate('/landing')}>
+                        <button className='text-base' onClick={()=>navigate('/landing')}>
                                 Login
                         </button>
                     </div>
 
                     <div className='sign-up'>
-                        <button onClick={()=>navigate('/signUp')}>
+                        <button className='text-base' onClick={()=>navigate('/signUp')}>
                                 Sign Up
                         </button>
                     </div>
@@ -93,13 +93,13 @@ const Landing = () => {
         <div className='heading'>
             <div className='left'>
             <div>
-                <h3>Unleash Your <span>Trading </span> <br></br>
-                Potential with Advanced <br></br>
-                <span>Risk Management Tools</span></h3>
+                <h3 className='text-5xl tracking-normal'>Unlock Smarter <span className='text-5xl tracking-normal'>Trading </span> <br></br>
+                Decisions with Next-Gen <br></br>
+                <span className='text-5xl tracking-normal'>Backtesting & Algo Trading Tools</span></h3>
             </div>
-
+ 
             <div>
-                <p>Maximize your profits with real-time market analysis, advanced trading tools,and risk management strategies.</p>
+                <p className='text-xl'>Maximize your profits with real-time market analysis, advanced trading tools,and risk management strategies.</p>
             </div>
 
             <div className='btn-container'>

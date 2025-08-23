@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import './bootstrap/css/bootstrap.css'
 // import App from './App';
 import Reset from './pages/Reset';
+import "./index.css"
 import Home from './Home';
 
 import Subscribe from './components/new/Dashboard/subscription/Subscribe';

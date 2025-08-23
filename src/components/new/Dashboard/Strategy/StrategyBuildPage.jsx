@@ -53,7 +53,7 @@ const StrategyBuildPage = ({setStrategyListIndi ,strategyListIndi}) => {
     const [strategyName, setStrategyName] = useState(() => retrieveFromLocalStorage('strategyName', ''));
     
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedOption, setSelectedOption] = useState("Select Strategies");
+    const [selectedOption, setSelectedOption] = useState("My Strategy");
 
 
 

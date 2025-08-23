@@ -567,27 +567,28 @@ const calculateDrawdown = (backtestResult, results) => {
 
 
 useEffect(() => {
-  // Destructure the relevant properties from currentStrategy
+  if (!currentStrategy) return; // prevent destructure if null
+
   const {
-      strategyDetails,
-      strategyDetails2,
-      strategyDetailsExit,
-      strategyDetailsExit2,
-      graphType,
-      marketType,
-      maxQuantity,
-      moveInstrument,
-      moveSl,
-      positionSizeType,
-      backQuantity,
-      sizeAmount,
-      pyStoploss,
-      backSymbol,
-      pyTarget,
-      timePeriod,
-      trailingType,
-      maxLong,
-      maxShort,
+    strategyDetails,
+    strategyDetails2,
+    strategyDetailsExit,
+    strategyDetailsExit2,
+    graphType,
+    marketType,
+    maxQuantity,
+    moveInstrument,
+    moveSl,
+    positionSizeType,
+    backQuantity,
+    sizeAmount,
+    pyStoploss,
+    backSymbol,
+    pyTarget,
+    timePeriod,
+    trailingType,
+    maxLong,
+    maxShort,
   } = currentStrategy;
 
   console.log(currentStrategy)
@@ -638,7 +639,7 @@ useEffect(() => {
       }
   } 
 }, [
-  currentStrategy, strategyListIndi // Dependencies for useEffect
+  currentStrategy, strategyListIndi 
 ]);
 
 

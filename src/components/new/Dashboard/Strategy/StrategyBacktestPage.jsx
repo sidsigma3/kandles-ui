@@ -33,28 +33,29 @@ const StrategyBacktestPage = ({strategyListIndi,setStrategyListIndi,setBacktestR
           maxShort: null,
         };
 
-        const {
-            strategyDetails,
-            strategyDetails2,
-            strategyDetailsExit,
-            strategyDetailsExit2,
-            graphType,
-            marketType,
-            maxQuantity,
-            moveInstrument,
-            moveSl,
-            positionSizeType,
-            backQuantity,
-            sizeAmount,
-            pyStoploss,
-            backSymbol,
-            pyTarget,
-            timePeriod,
-            trailingType,
-            maxLong,
-            maxShort,
-            strategyName,
-        } = currentStrategy;
+       const {
+  strategyDetails,
+  strategyDetails2,
+  strategyDetailsExit,
+  strategyDetailsExit2,
+  graphType,
+  marketType,
+  maxQuantity,
+  moveInstrument,
+  moveSl,
+  positionSizeType,
+  backQuantity,
+  sizeAmount,
+  pyStoploss,
+  backSymbol,
+  pyTarget,
+  timePeriod,
+  trailingType,
+  maxLong,
+  maxShort,
+  strategyName,
+} = currentStrategy || {};
+
 
     const [startDate,setStratDate] = useState()
     const [endDate,setEndDate] = useState()
