@@ -25,7 +25,7 @@ const LandingPage = () => {
         .then((res)=>{
           console.log(res.data.stat)
           if (res.data.stat===200){
-            toast.success(res.data.msg, {autoClose:3000})
+            // toast.success(res.data.msg, {autoClose:3000})
             navigate('/dashboard',{replace:true})
     
           }

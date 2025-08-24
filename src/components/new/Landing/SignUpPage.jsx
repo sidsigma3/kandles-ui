@@ -76,8 +76,10 @@ const SignUpPage = () => {
                 .then((res)=>{
                
                 if (res.data.stat===200){
-                    toast.success(res.data.msg, {autoClose:3000})
-          
+                   toast.success(res.data.msg, { autoClose: 3000 });
+                    setTimeout(() => {
+                      navigate("/landing", { replace: true });
+                    }, 3000);
                     
             }
             else{

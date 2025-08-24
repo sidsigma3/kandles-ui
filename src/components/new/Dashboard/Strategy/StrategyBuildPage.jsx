@@ -7,6 +7,8 @@ import { Modal, Button, Form ,FormLabel, FormControl, FormGroup, FormCheck, Form
 import StrategyBacktestPage from './StrategyBacktestPage';
 import StrategyOptimise from './StrategyOptimise';
 import PnLChart from '../Graph/PnlChart';
+import { IoMdLogOut } from "react-icons/io";
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const saveToLocalStorage = (key, value) => {
     localStorage.setItem(key, JSON.stringify(value));
@@ -19,7 +21,7 @@ const saveToLocalStorage = (key, value) => {
   
 
 const StrategyBuildPage = ({setStrategyListIndi ,strategyListIndi}) => {
-
+    const navigate = useNavigate()
     const [activePage, setActivePage] = useState(() => retrieveFromLocalStorage('activePage', 'build'));
     const [backtestResult, setBacktestResult] = useState(() => retrieveFromLocalStorage('backtestResult', null));
     const [optimiseStrategy, setOptimiseStrategy] = useState(() => retrieveFromLocalStorage('optimiseStrategy', ''));
@@ -839,10 +841,20 @@ const [currentPage, setCurrentPage] = useState(0);
 
             </div>
 
+
+            
+
             <div className='info-container'>
                 <h3>Deepak Kumar</h3>
 
-
+                <div className='d-flex items-center text-red-600'>
+                    <button
+                    onClick={()=>{
+                        localStorage.clear()
+                        navigate("/newlanding", { replace: true });
+                    }}
+                    ><IoMdLogOut size={20}/></button>
+                </div>
 
             </div>
 
